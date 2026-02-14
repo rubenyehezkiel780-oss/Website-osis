@@ -134,6 +134,9 @@ h1 {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* Icon */
