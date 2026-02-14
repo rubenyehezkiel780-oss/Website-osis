@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #000026, #19284C);
+    /* Center card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('background-Body1-removebg-preview.png') no-repeat center center;
+    background-size: contain;
+}
+
+@keyframes floatBackground {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Center Layout */
+.container {
+    padding: 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 400px;
+    width: 100%;
+    padding: 30px 15px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    text-align: center;
+
+    /* Animation */
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+/* Smooth Fade In */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Profile Image */
+.profile-img {
+    background: linear-gradient(to bottom, #000026, #19284C);
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Text */
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 10px 0 30px;
+}
+
+/* Links */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Button */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 10px;
+
+    background: #111827;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icon */
+.btn img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background: #1f2835;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Soft Click Effect */
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: black;
+}
