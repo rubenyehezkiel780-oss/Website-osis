@@ -26,6 +26,7 @@ body::before {
     height: 100vh;
     background: url('background-Body1-removebg-preview.png') no-repeat center center;
     background-size: contain;
+    pointer-events: none;
 }
 
 @keyframes floatBackground {
