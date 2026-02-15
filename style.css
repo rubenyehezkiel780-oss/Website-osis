@@ -13,7 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     min-height: 100dvh;
 }
 
@@ -50,7 +50,7 @@ body::before {
 
 /* Center Layout */
 .container {
-    padding: 20px;
+    padding: 40px 20px;
     max-width: 100%;
     display: flex;
     justify-content: center;
