@@ -32,14 +32,13 @@
                     <span>Youtube</span>
                 </a>
 
-                <a href="https://www.instagram.com/sman3pbun/?utm_source=ig_web_copy_link" class="btn" target="_blank"
-                    rel="noopener noreferrer">
+                <a href="instagram://user?username=sman3pbun" class="btn" onclick="forceApp(event, 'sman3pbun')">
                     <img src="Instagram_logo.webp" alt="Instagram">
                     <span>Instagram SMAN 3 Pangkalan Bun</span>
                 </a>
 
-                <a href="https://www.instagram.com/osissmantri_pbun/?utm_source=ig_web_copy_link" class="btn"
-                    target="_blank" rel="noopener noreferrer">
+                <a href="instagram://user?username=osissmantri_pbun" class="btn"
+                    onclick="forceApp(event, 'osissmantri_pbun')">
                     <img src="Instagram_logo.webp" alt="Instagram">
                     <span>Instagram OSIS SMAN 3 Pangkalan Bun</span>
                 </a>
@@ -53,6 +52,18 @@
         </div>
     </div>
 
+    <script>
+        function forceApp(e, username) {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (!isMobile) {
+                e.preventDefault();
+                window.location.href = `instagram://user?username=${username}`;
+                setTimeout(() => {
+                    window.location.href = `https://www.instagram.com/${username}`;
+                }, 100);
+            }
+        }
+    </script>
 </body>
 
 </html>
