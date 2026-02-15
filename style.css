@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #000069, #1f366b);
+    background: linear-gradient(to bottom, #030365, #1f366b);
     /* Center card */
     display: flex;
     justify-content: center;
