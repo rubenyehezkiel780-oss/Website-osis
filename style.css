@@ -14,7 +14,7 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 body::before {
@@ -24,9 +24,16 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('background-Body1-removebg-preview.png') no-repeat center center;
+    background: url('background-body-removebg-preview.png') no-repeat center center;
     background-size: contain;
     pointer-events: none;
+}
+
+.desc {
+    font-size: 14px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: #111827;
 }
 
 @keyframes floatBackground {
@@ -57,7 +64,7 @@ body::before {
     background: rgba(255, 255, 255, 0.7);
     max-width: 400px;
     width: 100%;
-    padding: 30px 15px;
+    padding: 15px 15px;
     border-radius: 14px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
     text-align: center;
@@ -65,6 +72,7 @@ body::before {
     /* Animation */
     animation: fadeIn 2s ease forwards;
     opacity: 0;
+    backdrop-filter: blur(2px);
 }
 
 /* Smooth Fade In */
@@ -82,13 +90,16 @@ body::before {
 
 /* Profile Image */
 .profile-img {
-    background: linear-gradient(to bottom, #000026, #19284C);
+    background-color: rgb(255, 255, 255);
     width: 135px;
     height: 135px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
     transition: transform 0.4s ease;
+    padding: 5%;
+    overflow: visible;
+    box-shadow: 0 0 40px rgba(25, 40, 76, 0.4);
 }
 
 .profile-img:hover {
@@ -98,18 +109,12 @@ body::before {
 /* Text */
 h1 {
     font-size: 22px;
+    padding-bottom: 20px;
     font-weight: 600;
     color: #111827;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.title {
-    font-size: 14px;
-    color: #6b7280;
-    margin: 10px 0 30px;
-}
 
-/* Links */
 .links {
     display: flex;
     flex-direction: column;
@@ -135,15 +140,21 @@ h1 {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 12px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 12px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 12px -3px rgba(0, 0, 0, 0.75);
 }
 
 /* Icon */
 .btn img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover img {
+    transform: rotate(2deg) scale(1.1);
 }
 
 /* Hover Effect */
